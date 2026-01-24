@@ -17,7 +17,14 @@
 }
 
 .textarea {
+  width: 100%;
+  max-width: 1310px;
+
   min-height: 68vh;
+
+  margin: 0 auto;
+  padding: 0 26px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,10 +33,19 @@
 }
 
 textarea {
+  width: 100%;
+
+  min-height: 48vh;
+
   border: 1px solid darkorchid;
   border-radius: 8px;
   box-shadow: 0 4px 20px 0 rgba(128, 128, 128, 0.5);
   padding: 8px;
+
+  font-size: 1rem;
+  line-height: 1.5;
+
+  resize: vertical;
 }
 
 .textarea h2 {
@@ -52,11 +68,11 @@ button {
   min-height: 68vh;
   width: 100%;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(402px, 240px));
-  gap: 24px;
-
+  display: flex;
   justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+
   padding: 0 24px;
 }
 
