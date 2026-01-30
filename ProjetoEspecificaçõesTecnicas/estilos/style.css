@@ -95,6 +95,10 @@ button {
   display: none;
 }
 
+.desativados {
+  border: 2px solid red;
+}
+
 .resultado > div:hover {
   border: 2px solid darkorchid;
   cursor: pointer;
