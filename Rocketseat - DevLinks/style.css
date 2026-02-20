@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --background-color: rgba(255, 255, 255, 0.1);
+  --background-color-transition: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.125);
+  --border-color-transition: rgb(255, 255, 255, 0.5);
+  --switch-icone: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --background-color: rgba(0, 0, 0, 0.1);
+  --background-color-transition: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(0, 0, 0, 0.125);
+  --border-color-transition: rgb(0, 0, 0, 0.5);
+  --switch-icone: url(./assets/sun.svg);
+}
+
+body {
+  background: var(--bg-url) top center/cover no-repeat fixed;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* profile */
+#profiler {
+  text-align: center;
+  padding: 24px;
+}
+
+#profiler img {
+  width: 112px;
+}
+
+#profiler p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* switch */
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-icone) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slide-out 0.4s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--border-color);
+}
+
+/* .light #switch button {
+  right: 0;
+  left: initial;
+} 
+  Aplicando a o uso dos keyframes a animação será aplicada (não fui utilizado o right pois basta manipular a propriedade do left
+    definindo os parametros de nome do keyframa, tempo e opcional a regra de permanencia da alteração
+*/
+.light #switch button {
+  animation: slide-in 0.4s forwards;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--background-color);
+  border: 1px solid var(--background-color-transition);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* Links */
+
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+
+  /* Suporte para todos os browsers atualmente, porém em alguns casos (poucos) deve inserir o prefixo -webkit... */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--background-color-transition);
+  border: 1.5px solid var(--border-color-transition);
+}
+
+/* Social Links */
+#social_links {
+  display: flex;
+  justify-content: center;
+  /* gap: 16px; */
+  /* para utilizar  gap, é necessário a utilização do display flex */
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social_links a {
+  /* margin: 0 16px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social_links a:hover {
+  background: var(--background-color);
+}
+
+footer {
+  padding: 0 0 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
