@@ -1,12 +1,13 @@
+import React from 'react'
+
 /* export default function () {
   return "Teste"
 } */
 
-import React from "react"
-
 /* export default function () {
   return <h1>Teste!!</h1>
 } */
+
 
 /* export default ()=> {
   return <h1>Teste!!!</h1>
