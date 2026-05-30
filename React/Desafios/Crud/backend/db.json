@@ -1,0 +1,48 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "email": "joao@example.com",
+      "telefone": "(11) 99999-8888",
+      "criado_em": "2026-05-21T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Santos",
+      "email": "maria@example.com",
+      "telefone": "(11) 98888-7777",
+      "criado_em": "2026-05-21T11:15:00Z"
+    },
+    {
+      "id": "3",
+      "nome": "Pedro Costa",
+      "email": "pedro@example.com",
+      "telefone": "(21) 97777-6666",
+      "criado_em": "2026-05-21T12:00:00Z"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Notebook",
+      "preco": 2500.00,
+      "estoque": 15,
+      "criado_em": "2026-05-21T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "nome": "Mouse",
+      "preco": 50.00,
+      "estoque": 100,
+      "criado_em": "2026-05-21T10:30:00Z"
+    },
+    {
+      "id": "3",
+      "nome": "Teclado",
+      "preco": 150.00,
+      "estoque": 50,
+      "criado_em": "2026-05-21T11:00:00Z"
+    }
+  ]
+}
